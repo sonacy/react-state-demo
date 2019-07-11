@@ -1,0 +1,33 @@
+{
+  "name": "@react-state-demo/mobx",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "jest --watch-all",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "tslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@react-state-demo/components": "1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  }
+}

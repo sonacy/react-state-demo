@@ -1,0 +1,37 @@
+{
+  "name": "@react-state-demo/components",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp src/components/Spinner.css dist/components",
+    "test": "jest --watch-all",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "tslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@react-state-demo/react-cache": "2.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@types/react-cache": "^2.0.1",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  },
+  "theme": {
+    "@primary-color": "#13C2C2"
+  }
+}
