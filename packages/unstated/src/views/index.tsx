@@ -1,10 +1,9 @@
 import { Button } from 'antd'
-import React, { lazy, useEffect, useState } from 'react'
-import { unstable_scheduleCallback } from 'scheduler'
+import React, { useEffect, useState } from 'react'
 
+import { Provider } from '../unstated'
 import ContributorListPage from './ContributePage'
-
-const UserPage = lazy(() => import('./UserPage'))
+import UserPage from './UserPage'
 
 const About = () => {
 	const [currentId, setCurrentId] = useState<string | null>(null)
@@ -16,9 +15,7 @@ const About = () => {
 
 	const handleUserClick = (id: string) => {
 		setCurrentId(id)
-		unstable_scheduleCallback(() => {
-			setshowDetail(true)
-		})
+		setshowDetail(true)
 	}
 
 	const handleBackClick = () => {
@@ -53,9 +50,13 @@ const About = () => {
 		)
 	}
 
-	return showDetail && currentId
-		? renderDetail(currentId)
-		: renderList(currentId)
+	return (
+		<Provider>
+			{showDetail && currentId
+				? renderDetail(currentId)
+				: renderList(currentId)}
+		</Provider>
+	)
 }
 
 export default About

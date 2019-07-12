@@ -1,5 +1,6 @@
 import Hooks from '@react-state-demo/hooks-cache'
 import Resource from '@react-state-demo/resource'
+import UnStated from '@react-state-demo/unstated'
 import { Button } from 'antd'
 import React, { ComponentType, PureComponent } from 'react'
 import { BrowserRouter, NavLink, Redirect, Route, Switch } from 'react-router-dom'
@@ -8,6 +9,7 @@ import Main from './main'
 
 const routes: { [key: string]: ComponentType } = {
 	main: Main,
+	unstated: UnStated,
 	resources: Resource,
 	hooks: Hooks,
 }

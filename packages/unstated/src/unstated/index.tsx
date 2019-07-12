@@ -69,11 +69,11 @@ export class Subscribe extends React.Component<SubscribeProps> {
 		this._unsubscribe()
 	}
 
-	_unsubscribe() {
+	_unsubscribe = () => {
 		this.instances.forEach(c => c.unsubscribe(this.onUpdate))
 	}
 
-	onUpdate() {
+	onUpdate = () => {
 		return new Promise(resolve => {
 			if (!this.unmount) {
 				this.setState(DUMMY_STATE, resolve)
@@ -83,10 +83,10 @@ export class Subscribe extends React.Component<SubscribeProps> {
 		})
 	}
 
-	_createInstance(
+	_createInstance = (
 		map: Map<ContainerType<any>, Container<any>> | null,
 		containers: (ContainerType<any> | Container<any>)[]
-	) {
+	) => {
 		this._unsubscribe()
 
 		if (map === null) {

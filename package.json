@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "lerna run start --scope=@react-state-demo/frontend",
-    "build": "lerna run build --scope={@react-state-demo/components,@react-state-demo/hooks-cache,@react-state-demo/resource}"
+    "build": "lerna run build --scope={@react-state-demo/components,@react-state-demo/hooks-cache,@react-state-demo/resource,@react-state-demo/unstated}"
   },
   "workspaces": {
     "packages": [
