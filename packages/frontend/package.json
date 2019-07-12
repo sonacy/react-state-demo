@@ -26,7 +26,8 @@
     "@react-state-demo/components": "1.0.0",
     "@react-state-demo/hooks-cache": "1.0.0",
     "@react-state-demo/resource": "1.0.0",
-    "@react-state-demo/unstated": "1.0.0"
+    "@react-state-demo/unstated": "1.0.0",
+    "@react-state-demo/fetcher": "1.0.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.2",

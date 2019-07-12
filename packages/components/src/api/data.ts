@@ -1,4 +1,4 @@
-import { address, image, internet, lorem, name } from 'faker'
+import { address, image, internet, lorem, name, random } from 'faker'
 
 export type TContributorItem = {
 	id: string
@@ -15,6 +15,7 @@ export type TUserProfile = {
 }
 
 export type TRepoItem = {
+	id?: string
 	name: string
 	url: string
 	description: string
@@ -39,6 +40,7 @@ export const createUserProfile = (id?: string): TUserProfile => ({
 })
 
 export const createRepoItem = (): TRepoItem => ({
+	id: random.uuid(),
 	name: name.title(),
 	url: internet.url(),
 	description: lorem.lines(),
